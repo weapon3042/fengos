@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D0353D89-9C62-4126-A978-531D38C64917</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OpenSilo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2D911D84-345F-4263-9EE7-1E9B11BF10B5</key>
+		<string>https://bitbucket.org/opensilo/ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OpenSilo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2D911D84-345F-4263-9EE7-1E9B11BF10B5</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/opensilo/ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2D911D84-345F-4263-9EE7-1E9B11BF10B5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2D911D84-345F-4263-9EE7-1E9B11BF10B5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OpenSilo Master</string>
+		</dict>
+	</array>
+</dict>
+</plist>
