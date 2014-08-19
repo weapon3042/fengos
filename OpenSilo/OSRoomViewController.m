@@ -17,6 +17,9 @@
 #import "OSTranscriptTableViewCell.h"
 #import "OSDateTimeUtils.h"
 #import "UIImageView+AFNetworking.h"
+#import "OSDataManger.h"
+#import "OSRequestUtils.h"
+#import "OSSession.h"
 
 @interface OSRoomViewController ()
 
@@ -205,6 +208,30 @@
     [cell.pic.layer setMasksToBounds:YES];
     [cell.pic.layer setCornerRadius:22.0];
     return cell;
+}
+
+-(void) onClickChili:(UIButton*)sender
+{
+    UIButton *chiliBtn =  (UIButton *)[self.view viewWithTag:sender.tag];
+    NSString *userId = [OSSession getInstance].user.userId;
+    //{“chili”: {“firebase_msg_id”: “DSFDSRWE”, “given_by”: “reww2423423”, “given_to”: “rewfewfewg”}}
+    NSDictionary *message = [self.array objectAtIndex:sender.tag];
+    NSDictionary *parameters = @{@"chili":
+                                    @{
+                                         @"firebase_msg_id":@"",
+                                         @"given_by":userId,
+                                         @"given_to":message[@"user_id"]
+                                    }
+                                 };
+    OSRequestUtils *request = [[OSRequestUtils alloc]init];
+    [request httpRequestWithURL:[NSString stringWithFormat:@"api/user/chilis/%@",userId] andType:@"POST"  andAuthHeader:YES andParameters:parameters andResponseBlock:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (!error) {
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            if ([[json objectForKey:@"success"] boolValue]) {
+                [chiliBtn setImage:[UIImage imageNamed:@"red-chili"] forState:UIControlStateNormal];
+            }
+        }
+    }];
 }
 
 -(void)registerCustomCellsFromNibs
