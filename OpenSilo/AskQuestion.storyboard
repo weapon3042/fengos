@@ -91,7 +91,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add-topic" width="34" height="30"/>
+        <image name="add-topic" width="34" height="34"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

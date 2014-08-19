@@ -199,6 +199,13 @@ static NSString * const transcriptCellIdentifier = @"OSTranscriptTableViewCell";
         [self addChildViewController: self.settingViewController];
         [self.view addSubview:self.settingViewController.view];
         self.settingViewController.view.autoresizesSubviews = YES;
+    
+    } else if([storyboardName isEqualToString:kNotificationTab]) {//display notification view
+        UIStoryboard *notificationStoryboard = [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
+        self.notificationController = (OSNotificationViewController *)[notificationStoryboard instantiateInitialViewController];
+        [self addChildViewController: self.notificationController];
+        [self.view addSubview:self.notificationController.view];
+        self.notificationController.view.autoresizesSubviews = YES;
 
     } else if([storyboardName isEqualToString:kInvitePeople]) {
         UIStoryboard *settingStoryboard = [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];

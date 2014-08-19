@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CNF-3y-Ep8">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="BoV-Zc-7yK">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Wmq-JS-IdB" customClass="OSNotificationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FeV-2V-gvR"/>
+                        <viewControllerLayoutGuide type="bottom" id="676-Im-2BW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IxZ-pS-07C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="uQz-gM-cma">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OSTranscriptTableViewCell" id="gNa-MM-MsL">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gNa-MM-MsL" id="bfl-IP-BLP">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wmq-JS-IdB" id="yBz-YG-gla"/>
+                                    <outlet property="delegate" destination="Wmq-JS-IdB" id="TZz-3m-2ae"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tCi-lU-e41"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="oyl-QM-9ZS" id="Ozm-LG-aEK"/>
+                        <outlet property="tableView" destination="uQz-gM-cma" id="p37-9b-8q0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VT4-5R-A7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="oyl-QM-9ZS">
+                    <connections>
+                        <outlet property="delegate" destination="Wmq-JS-IdB" id="zQ0-th-tQJ"/>
+                        <outlet property="searchContentsController" destination="Wmq-JS-IdB" id="SG2-cd-RQk"/>
+                        <outlet property="searchResultsDataSource" destination="Wmq-JS-IdB" id="CIe-fP-aNf"/>
+                        <outlet property="searchResultsDelegate" destination="Wmq-JS-IdB" id="ITC-pr-E30"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-1493" y="-354"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lt9-no-480">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CNF-3y-Ep8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z2h-j4-RBX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wmq-JS-IdB" kind="relationship" relationship="rootViewController" id="dBP-md-sZa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLd-6d-Cc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2019" y="-354"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

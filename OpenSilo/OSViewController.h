@@ -18,6 +18,7 @@
 #import "OSChannelViewController.h"
 #import "OSRoomViewController.h"
 #import "OSSettingViewController.h"
+#import "OSNotificationViewController.h"
 #import "METransitions.h"
 #import "OSInboxViewController.h"
 #import "BoxNavigationController.h"
@@ -32,6 +33,7 @@
 @property (nonatomic, strong) OSRoomViewController * roomViewController;
 @property (nonatomic, strong) OSInboxViewController * inboxViewController;
 @property (nonatomic, strong) OSSettingViewController *settingViewController;
+@property (nonatomic, strong) OSNotificationViewController *notificationController;
 @property (nonatomic, strong) BoxNavigationController *boxNavigationController;
 @property (nonatomic, strong) METransitions *transitions;
 @property (nonatomic, weak) UIButton *titleBtn;

@@ -92,9 +92,7 @@
 }
 
 -(void)fetchInbox{
-
-    #warning need to change back to dynamic
-    NSString *userId = @"53c43bbe94e4bf106a0ed35e";
+    NSString *userId = [OSSession getInstance].user.userId;
     self.inboxArray = [[NSMutableArray alloc] init];
     Firebase *firebase = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/inbox/%@",fireBaseUrl,userId]];
     [firebase authWithCredential:fireBaseSecret withCompletionBlock:^(NSError* error, id authData) {

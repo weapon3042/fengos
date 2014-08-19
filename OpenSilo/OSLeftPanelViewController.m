@@ -44,7 +44,7 @@ static NSString * const listCellExpandIdentifier = @"LeftPanelExpandableCell";
     
     [self.navigationController.navigationBar setHidden:NO];
     
-    _list = @[kFavoritesTab,kChannelTab,kRoomTab,kInboxTab,kSearchTab,kAskQuestionTab,kCreateChannelTab,kSettingsTab];
+    _list = @[kFavoritesTab,kChannelTab,kRoomTab,kInboxTab,kSearchTab,kAskQuestionTab,kCreateChannelTab,kSettingsTab, kNotificationTab];
     
     //Table view
     [[self tableView] setBackgroundColor:[UIColor clearColor]];
@@ -141,7 +141,7 @@ static NSString * const listCellExpandIdentifier = @"LeftPanelExpandableCell";
     }
     
     // Return the number of rows in the section.
-    return 5;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
