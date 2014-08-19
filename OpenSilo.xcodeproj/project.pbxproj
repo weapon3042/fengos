@@ -57,12 +57,12 @@
 		B63A594D19A19896003EA132 /* OSFileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B63A594B19A19896003EA132 /* OSFileTableViewCell.xib */; };
 		B63A595119A198A2003EA132 /* OSPinQuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B63A594F19A198A2003EA132 /* OSPinQuestionTableViewCell.m */; };
 		B63A595219A198A2003EA132 /* OSPinQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B63A595019A198A2003EA132 /* OSPinQuestionTableViewCell.xib */; };
-		B63A596419A2B3BE003EA132 /* OSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B63A596319A2B3BE003EA132 /* OSDataManager.m */; };
 		B64876EC19883BB000B42189 /* OSEntranceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B64876EB19883BB000B42189 /* OSEntranceViewController.m */; };
 		B64876EE19883BE800B42189 /* Entrance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64876ED19883BE800B42189 /* Entrance.storyboard */; };
 		B64876F119883F2400B42189 /* OSSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B64876F019883F2400B42189 /* OSSignUpViewController.m */; };
 		B64B69281975AC17009F7B05 /* OSChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B69271975AC17009F7B05 /* OSChannel.m */; };
 		B64B692B1975AE89009F7B05 /* OSRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B692A1975AE89009F7B05 /* OSRoom.m */; };
+		B656ECA219A3EFAC001D091C /* OSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B656ECA119A3EFAC001D091C /* OSDataManager.m */; };
 		B6A5E10D198AC59C00772EC8 /* OSInviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A5E10C198AC59C00772EC8 /* OSInviteViewController.m */; };
 		B6A5E110198AD14900772EC8 /* OSSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A5E10F198AD14900772EC8 /* OSSearchViewController.m */; };
 		B6A5E112198AD16A00772EC8 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A5E111198AD16A00772EC8 /* Search.storyboard */; };
@@ -192,8 +192,6 @@
 		B63A594E19A198A2003EA132 /* OSPinQuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPinQuestionTableViewCell.h; sourceTree = "<group>"; };
 		B63A594F19A198A2003EA132 /* OSPinQuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPinQuestionTableViewCell.m; sourceTree = "<group>"; };
 		B63A595019A198A2003EA132 /* OSPinQuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSPinQuestionTableViewCell.xib; sourceTree = "<group>"; };
-		B63A596219A2B3BE003EA132 /* OSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSDataManager.h; path = ../../OpenSiloMaster/OpenSilo/OSDataManager.h; sourceTree = "<group>"; };
-		B63A596319A2B3BE003EA132 /* OSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSDataManager.m; path = ../../OpenSiloMaster/OpenSilo/OSDataManager.m; sourceTree = "<group>"; };
 		B64876EA19883BB000B42189 /* OSEntranceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSEntranceViewController.h; sourceTree = "<group>"; };
 		B64876EB19883BB000B42189 /* OSEntranceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSEntranceViewController.m; sourceTree = "<group>"; };
 		B64876ED19883BE800B42189 /* Entrance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Entrance.storyboard; sourceTree = "<group>"; };
@@ -203,6 +201,8 @@
 		B64B69271975AC17009F7B05 /* OSChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSChannel.m; path = model/OSChannel.m; sourceTree = "<group>"; };
 		B64B69291975AE89009F7B05 /* OSRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSRoom.h; path = model/OSRoom.h; sourceTree = "<group>"; };
 		B64B692A1975AE89009F7B05 /* OSRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSRoom.m; path = model/OSRoom.m; sourceTree = "<group>"; };
+		B656ECA019A3EFAC001D091C /* OSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDataManager.h; sourceTree = "<group>"; };
+		B656ECA119A3EFAC001D091C /* OSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDataManager.m; sourceTree = "<group>"; };
 		B6A5E10B198AC59C00772EC8 /* OSInviteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSInviteViewController.h; sourceTree = "<group>"; };
 		B6A5E10C198AC59C00772EC8 /* OSInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSInviteViewController.m; sourceTree = "<group>"; };
 		B6A5E10E198AD14900772EC8 /* OSSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSearchViewController.h; sourceTree = "<group>"; };
@@ -381,8 +381,8 @@
 		9AADA584197993EB000F8DED /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				B63A596219A2B3BE003EA132 /* OSDataManager.h */,
-				B63A596319A2B3BE003EA132 /* OSDataManager.m */,
+				B656ECA019A3EFAC001D091C /* OSDataManager.h */,
+				B656ECA119A3EFAC001D091C /* OSDataManager.m */,
 				B61592371981A4C200D3AE9C /* OSRequestUtils.h */,
 				B61592381981A4C200D3AE9C /* OSRequestUtils.m */,
 			);
@@ -826,7 +826,7 @@
 				B62F33FA197AE69700BD8CEA /* UITableViewCell+NIB.m in Sources */,
 				B6354EE4197EFAF500CC720C /* OSPeopleTableViewCell.m in Sources */,
 				9A6B60E2196D19720016D83B /* OSViewController.m in Sources */,
-				B63A596419A2B3BE003EA132 /* OSDataManager.m in Sources */,
+				B656ECA219A3EFAC001D091C /* OSDataManager.m in Sources */,
 				9AF10DA81976230A00474A2A /* OSMessage.m in Sources */,
 				B6DFEEE8199034C600DE8BC8 /* OSChannelSettingViewController.m in Sources */,
 				9A28E11B1986FCA60054FE35 /* MEDynamicTransition.m in Sources */,

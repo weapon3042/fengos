@@ -17,13 +17,12 @@
 #import "OSTranscriptTableViewCell.h"
 #import "OSDateTimeUtils.h"
 #import "UIImageView+AFNetworking.h"
-#import "OSDataManger.h"
 #import "OSRequestUtils.h"
-#import "OSSession.h"
 
 @interface OSRoomViewController ()
 
 @property (nonatomic, strong) METransitions *transitions;
+@property (nonatomic, strong) NSMutableDictionary *dict;
 
 @end
 
@@ -56,9 +55,12 @@
     NSString *roomId = [OSSession getInstance].currentRoom.fireBaseId ? [OSSession getInstance].currentRoom.fireBaseId : DEFAULT_ROOM_ID;
     NSString *url = [NSString stringWithFormat:@"%@resolutionrooms/%@/messages",fireBaseUrl,roomId];
     self.firebase = [[Firebase alloc] initWithUrl:url];
+    _dict = [[NSMutableDictionary alloc]init];
     [self.firebase authWithCredential:fireBaseSecret withCompletionBlock:^(NSError* error, id authData) {
         [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
-            [self.array addObject:snapshot.value];
+            
+            [self.array addObject:snapshot.name];
+            [_dict setObject:snapshot.value forKey:snapshot.name];
             [self.tableView reloadData];
             if (self.array.count > 1) {
                 [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:(self.array.count -1) inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
@@ -67,7 +69,7 @@
     } withCancelBlock:^(NSError* error) {
         NSLog(@"Authentication status was cancelled! %@", error);
     }];
-
+    
 }
 
 - (void)viewDidLoad
@@ -146,7 +148,8 @@
 {
     OSTranscriptTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"OSTranscriptTableViewCell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    NSDictionary *message = [self.array objectAtIndex:indexPath.row];
+    NSString *messageFirebaseId = [self.array objectAtIndex:indexPath.row];
+    NSDictionary *message = _dict[messageFirebaseId];
     NSString *userId = message[@"user_id"];
     NSDictionary *userInfo = [[OSSession getInstance].allUsers objectForKey:userId];
     if([message isKindOfClass:[NSDictionary class]]){
@@ -215,13 +218,14 @@
     UIButton *chiliBtn =  (UIButton *)[self.view viewWithTag:sender.tag];
     NSString *userId = [OSSession getInstance].user.userId;
     //{“chili”: {“firebase_msg_id”: “DSFDSRWE”, “given_by”: “reww2423423”, “given_to”: “rewfewfewg”}}
-    NSDictionary *message = [self.array objectAtIndex:sender.tag];
+    NSString *messageFirebaseId = [self.array objectAtIndex:sender.tag];
+    NSDictionary *message = _dict[messageFirebaseId];
     NSDictionary *parameters = @{@"chili":
-                                    @{
+                                     @{
                                          @"firebase_msg_id":@"",
                                          @"given_by":userId,
                                          @"given_to":message[@"user_id"]
-                                    }
+                                         }
                                  };
     OSRequestUtils *request = [[OSRequestUtils alloc]init];
     [request httpRequestWithURL:[NSString stringWithFormat:@"api/user/chilis/%@",userId] andType:@"POST"  andAuthHeader:YES andParameters:parameters andResponseBlock:^(NSData *data, NSURLResponse *response, NSError *error) {
